@@ -59,8 +59,7 @@ export default {
     margin-bottom: 10px;
 }
 .card-header{
-    background-color:rgba(61, 43, 224, 0.925);
-    color: #fff;
+    background-color:#d1ecf1;
 }
 .btn{
     margin-top: 5px;
