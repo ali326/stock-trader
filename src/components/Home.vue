@@ -1,10 +1,23 @@
 <template>
-    <h1>this is home component</h1>
+    <div>
+        <div class="jumbotron">
+             <h3 class="display-4">Trade or View your Portfolio</h3>
+             <h4 class="lead">You may Save & Load your Data</h4>
+             <h4 class="lead">Click on 'End Day' to begin a New Day!</h4>
+             <hr class="my-4">
+             <p>Your Funds: {{funds}}</p>
+
+         </div>
+    </div>
 </template>
 
 <script>
 export default {
-           
+          computed: {
+              funds(){
+                  return this.$store.getters.funds;
+              }
+          } 
 }
 </script>
 

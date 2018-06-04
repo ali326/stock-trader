@@ -15,7 +15,7 @@
                    >
                </div>
                
-                   <button class="btn btn-success"
+                   <button class="btn btn-primary"
                    @click="buyStock"
                    :disabled="quantity <= 0 "
                    >Buy</button>
@@ -57,7 +57,7 @@ export default {
     margin-bottom: 10px;
 }
 .card-header{
-    background-color: #d4edda;
+    background-color:#d1ecf1;
 }
 .btn{
     margin-top: 5px;
