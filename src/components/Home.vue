@@ -5,7 +5,7 @@
              <h4 class="lead">You may Save & Load your Data</h4>
              <h4 class="lead">Click on 'End Day' to begin a New Day!</h4>
              <hr class="my-4">
-             <p>Your Funds: {{funds}}</p>
+             <p>Your Funds: {{funds | currency}}</p>
 
          </div>
     </div>
