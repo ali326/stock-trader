@@ -58,9 +58,6 @@ export default {
 .card{
     margin-bottom: 10px;
 }
-.card-header{
-    background-color:#f8d7da;
-}
 .btn{
     margin-top: 5px;
 }
