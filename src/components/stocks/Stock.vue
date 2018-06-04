@@ -12,13 +12,14 @@
                    class="form-control"
                    placeholder="Quantity"
                    v-model="quantity"
+                   :class="{danger: insufficientFunds}"
                    >
                </div>
                
                    <button class="btn btn-primary"
                    @click="buyStock"
-                   :disabled="quantity <= 0 "
-                   >Buy</button>
+                   :disabled="insufficientFunds || quantity <= 0 "
+                   >{{insufficientFunds ? 'insufficient funds' : 'Buy' }}</button>
                
             </div>
         </div>
@@ -35,6 +36,14 @@ export default {
         return{
             quantity: 0
         }
+    },
+    computed: {
+        funds(){
+            return this.$store.getters.funds;
+        },
+         insufficientFunds(){
+             return this.quantity * this.stock.price > this.funds; 
+         }
     },
     methods:{
         buyStock(){
@@ -58,5 +67,8 @@ export default {
 }
 .btn{
     margin-top: 5px;
+}
+.danger {
+    border: 1px solid red;
 }
 </style>
