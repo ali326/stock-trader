@@ -17,15 +17,18 @@
     <strong class="navbar-text navbar-right">Funds: {{funds | currency}}</strong>
     <ul class="nav navbar-nav navbar-right">
         <li class="nav-item"><a href="#" @click="endDay" class="nav-link">End Day</a></li>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Save & Load
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Save Data</a>
-          <a class="dropdown-item" href="#">Load Data</a>
-        </div>
-      </li>
+        <li class="nav-item dropdown"
+         :class="{open: isDropDownOpen}"
+         @click="isDropDownOpen = !isDropDownOpen"
+         >
+           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Save & Load
+           </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Save Data</a>
+                <a class="dropdown-item" href="#">Load Data</a>
+            </div>
+        </li>
     </ul>
 
   </div>
@@ -35,6 +38,11 @@
 import {mapActions} from 'vuex'
 
 export default {
+      data(){
+          return {
+            isDropDownOpen: false
+          }
+      },
       computed: {
               funds(){
                   return this.$store.getters.funds;
