@@ -29,9 +29,11 @@ export default {
 
 <style>
  body {
+   background: #e2e1e0;
    padding: 30px;
  }
  .content{
+   margin-top: 20px;
    padding: 15px;
  }
  .slide-enter-active {
