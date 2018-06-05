@@ -3,8 +3,8 @@ export default [
     {id:2 ,name: 'Google' ,price:250},
     {id:3 ,name: 'Apple' ,price:300},
     {id:4 ,name: 'Twitter' ,price:200},
-    {id: 5 ,name: Facebook, price: 290},
-    {id: 6,name: Instagram, price: 270 },
+    {id: 5 ,name: 'Facebook', price: 290},
+    {id: 6,name: 'Instagram', price: 270 },
     
 ]
                 
